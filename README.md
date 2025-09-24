@@ -47,7 +47,6 @@ Now, open your browser and navigate to http://localhost:3000 to see the applicat
 
 2. Folder structure
    
-/
 ├── app/                  # Contains the application's routes based on the App Router architecture.
 
 ├── components/           # Contains reusable React components.
