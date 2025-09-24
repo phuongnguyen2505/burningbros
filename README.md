@@ -4,8 +4,16 @@ This is an e-commerce application project built with Next.js and TypeScript. It 
 Live Demo URL: https://burningbros.vercel.app/
 user: emilys
 password: emilyspass
-credit card: MasterCard 5555-5555-5555-5555 12/33 CVV:123
-             VISA 4444-4444-4444-4444 12/33 CVV:123
+credit card: 
+MasterCard 
+5555-5555-5555-5555 
+12/33 
+CVV:123
+
+VISA 
+4444-4444-4444-4444 
+12/33 
+CVV:123
 
 Tech Stack
 Framework: Next.js, TypeScript, Tailwind CSS
