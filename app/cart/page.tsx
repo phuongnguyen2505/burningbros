@@ -3,7 +3,7 @@
 import { useCartStore } from '@/store/cartStore';
 import Link from 'next/link';
 import Image from 'next/image';
-import { LuMinus, LuPlus, LuTrash2 } from 'react-icons/lu';
+import { LuArrowLeft, LuMinus, LuPlus, LuTrash2 } from 'react-icons/lu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChangeEvent } from 'react';
 
@@ -32,9 +32,11 @@ export default function CartPage() {
             <div className="text-center">
                 <h1 className="text-3xl font-bold">Your Cart is Empty</h1>
                 <p className="mt-2 text-muted-foreground">Looks like you have not added anything to your cart yet.</p>
-                <Link href="/" className="mt-6 inline-block bg-primary text-primary-foreground px-6 py-2 rounded-md">
-                    Start Shopping
-                </Link>
+                <div className='inline-block bg-muted rounded-lg'>
+                    <Link href="/" className="flex items-center gap-2 mt-6 text-red-700 px-6 py-2 rounded-md">
+                        <LuArrowLeft />Start Shopping
+                    </Link>
+                </div>
             </div>
         );
     }
