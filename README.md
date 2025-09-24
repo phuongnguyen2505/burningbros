@@ -49,16 +49,27 @@ Now, open your browser and navigate to http://localhost:3000 to see the applicat
    
 /
 ├── app/                  # Contains the application's routes based on the App Router architecture.
+
 ├── components/           # Contains reusable React components.
-│   ├── common/           # General-purpose components (Button, Input, Icons...).
-│   ├── layout/           # Structural layout components (Navbar, Footer, MainLayout...).
-│   └── ui/               # Feature-specific components (ProductCard...).
+
+│     ├── common/           # General-purpose components (Button, Input, Icons...).
+
+│     ├── layout/           # Structural layout components (Navbar, Footer, MainLayout...).
+
+│     └── ui/               # Feature-specific components (ProductCard...).
+
 ├── context/              # Contains React Context Providers (e.g., AppProviders).
+
 ├── hooks/                # Contains custom hooks (e.g., useDebounce).
+
 ├── lib/                  # Contains core logic, more complex helpers (e.g., api.ts, validators.ts).
+
 ├── store/                # Contains Zustand stores for global state management.
+
 ├── types/                # Contains TypeScript definitions (interfaces).
+
 └── utils/                # Contains small, reusable utility functions (e.g., cardUtils.ts).
+
 
 3. Challenges & Solutions
 
