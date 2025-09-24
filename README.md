@@ -2,8 +2,12 @@ E-commerce Application with Next.js
 This is an e-commerce application project built with Next.js and TypeScript. It fully simulates the features outlined in the project brief, including user authentication, product display, cart management, and a checkout process.
 
 Live Demo URL: https://burningbros.vercel.app/
+
 user: emilys
+
 password: emilyspass
+
+
 credit card: 
 
 MasterCard 
@@ -21,6 +25,7 @@ VISA
 12/33 
 
 CVV:123
+
 
 
 Tech Stack
