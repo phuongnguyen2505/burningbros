@@ -2,6 +2,10 @@ E-commerce Application with Next.js
 This is an e-commerce application project built with Next.js and TypeScript. It fully simulates the features outlined in the project brief, including user authentication, product display, cart management, and a checkout process.
 
 Live Demo URL: https://burningbros.vercel.app/
+user: emilys
+password: emilyspass
+credit card: MasterCard 5555-5555-5555-5555 12/33 CVV:123
+             VISA 4444-4444-4444-4444 12/33 CVV:123
 
 Tech Stack
 Framework: Next.js, TypeScript, Tailwind CSS
@@ -43,29 +47,17 @@ Now, open your browser and navigate to http://localhost:3000 to see the applicat
 
 2. Folder structure
    
-   The project is structured by feature modules to ensure it is easy to manage and scale.
-
 /
 ├── app/                  # Contains the application's routes based on the App Router architecture.
-
 ├── components/           # Contains reusable React components.
-
 │   ├── common/           # General-purpose components (Button, Input, Icons...).
-
 │   ├── layout/           # Structural layout components (Navbar, Footer, MainLayout...).
-
 │   └── ui/               # Feature-specific components (ProductCard...).
-
 ├── context/              # Contains React Context Providers (e.g., AppProviders).
-
 ├── hooks/                # Contains custom hooks (e.g., useDebounce).
-
 ├── lib/                  # Contains core logic, more complex helpers (e.g., api.ts, validators.ts).
-
 ├── store/                # Contains Zustand stores for global state management.
-
 ├── types/                # Contains TypeScript definitions (interfaces).
-
 └── utils/                # Contains small, reusable utility functions (e.g., cardUtils.ts).
 
 3. Challenges & Solutions
