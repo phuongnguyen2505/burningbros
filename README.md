@@ -13,21 +13,26 @@ Animations: Framer Motion
    To run this project on your local machine, please follow these steps:
 
 Step 1: Clone repository
+
 git clone https://github.com/phuongnguyen2505/burningbros
 
 Step 2: Navigate to the project directory
+
 cd burningbros
 
 Step 3: Create environment file
+
 Create a file named .env in the root directory and add the following line to connect to the API:
 NEXT_PUBLIC_API_BASE_URL=https://dummyjson.com
 
 Step 4: Install dependencies
+
 npm install
 or
 yarn install
 
 Step 5: Run the development server
+
 npm run dev
 or
 yarn dev
