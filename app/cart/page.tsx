@@ -6,12 +6,9 @@ import Image from 'next/image';
 import { LuMinus, LuPlus, LuTrash2 } from 'react-icons/lu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChangeEvent } from 'react';
-import { useModal } from '@/context/AppProviders';
-
 
 export default function CartPage() {
     const { items, removeItem, updateQuantity, clearCart } = useCartStore();
-    const { openModal } = useModal();
 
     const totalPrice = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
     const handleQuantityChange = (e: ChangeEvent<HTMLInputElement>, itemId: number) => {
@@ -20,29 +17,15 @@ export default function CartPage() {
             updateQuantity(itemId, newQuantity);
         }
     };
-    const handleDebugClick = () => {
-        console.log("Debug button clicked. Calling openModal...");
-        openModal({
-            title: 'Modal Test',
-            message: 'If you see this, the ModalProvider is working correctly!',
-            confirmText: 'Got it!'
-        });
-    };
     const itemVariants = {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 },
         exit: { opacity: 0, x: -50, transition: { duration: 0.3 } },
     };
     const handleClearCart = () => {
-        openModal({
-            title: 'Clear Cart?',
-            message: 'Are you sure you want to remove all items from your cart?',
-            confirmText: 'Yes, Clear It',
-            cancelText: 'No, Keep It',
-            onConfirm: () => {
-                clearCart();
-            }
-        });
+        if (window.confirm('Are you sure you want to remove all items from your cart?')) {
+            clearCart();
+        }
     };
     if (items.length === 0) {
         return (
@@ -58,12 +41,6 @@ export default function CartPage() {
 
     return (
         <div>
-            <button
-                onClick={handleDebugClick}
-                className="fixed bottom-4 right-4 z-50 bg-red-600 text-white font-bold py-2 px-4 rounded-lg cursor-pointer"
-            >
-                Test Modal
-            </button>
             <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="md:col-span-2">
@@ -124,7 +101,7 @@ export default function CartPage() {
                         </div>
                         <div className="flex justify-between mb-4">
                             <span>Shipping</span>
-                            <span>Free</span>
+                            <span className="text-green-500">Free</span>
                         </div>
                         <hr className="my-2" />
                         <div className="flex justify-between font-bold text-lg">

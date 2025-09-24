@@ -18,3 +18,27 @@ export interface ProductsApiResponse {
     skip: number;
     limit: number;
 }
+
+export interface User {
+    id: number;
+    username: string;
+    email: string;
+    firstName: string;
+    lastName: string;
+    gender: string;
+    image: string;
+    address?: {
+        address?: string;
+        city?: string;
+        postalCode?: string;
+    };
+}
+
+export interface AuthCredentials {
+    username?: string;
+    password?: string;
+}
+
+export interface AuthResponse extends User {
+    token: string;
+}

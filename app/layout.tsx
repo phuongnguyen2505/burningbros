@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import { AppProviders } from '@/context/AppProviders';
+import MainLayout from '@/components/layout/MainLayout';
+
+export const dynamic = 'force-dynamic';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -21,11 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.className} flex flex-col min-h-screen`}>
         <AppProviders>
-          <Navbar />
-          <main className="flex-grow container mx-auto px-6 py-12">
-            {children}
-          </main>
-          <Footer />
+          <MainLayout>{children}</MainLayout>
         </AppProviders>
       </body>
     </html >

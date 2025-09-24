@@ -1,33 +1,21 @@
 'use client';
-import { useModal } from '@/context/AppProviders';
-import { Product } from '@/types';
+
+import { LuShoppingCart } from "react-icons/lu";
 
 interface AddToCartButtonProps {
     onAddToCart: () => void;
-    product: Product;
 }
 
-export default function AddToCartButton({ onAddToCart, product }: AddToCartButtonProps) {
-    const { openModal } = useModal();
-
-    const handleClick = () => {
-        onAddToCart();
-        openModal({
-            title: 'Success!',
-            message: `${product.title} has been added to your cart.`,
-            confirmText: 'Great!',
-        });
-    };
-
+export default function AddToCartButton({ onAddToCart }: AddToCartButtonProps) {
     return (
         <button
             onClick={(e) => {
                 e.preventDefault();
-                handleClick();
+                onAddToCart();
             }}
-            className="..."
+            className="flex justify-center gap-2 items-center mt-4 w-full bg-[#272e3f] text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity cursor-pointer"
         >
-            Add to Cart
+            <LuShoppingCart />Add to Cart
         </button>
     );
 }

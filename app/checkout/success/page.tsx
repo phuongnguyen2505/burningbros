@@ -1,14 +1,24 @@
+'use client'; // Chuyển thành Client Component
+
+import { useEffect } from 'react';
 import Link from 'next/link';
+import { useCartStore } from '@/store/cartStore';
 
 export default function OrderSuccessPage() {
+    const clearCart = useCartStore((state) => state.clearCart);
+
+    useEffect(() => {
+        clearCart();
+    }, [clearCart]);
+
     return (
         <div className="container mx-auto px-4 py-8 text-center">
             <svg className="mx-auto h-12 w-12 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <h1 className="mt-4 text-3xl font-bold">Order Placed Successfully!</h1>
-            <p className="mt-2 text-muted-foreground">Thank you for your purchase. We will process your order shortly.</p>
-            <Link href="/" className="mt-8 inline-block bg-primary text-primary-foreground px-6 py-2 rounded-md">
+            <p className="mt-2 text-muted-foreground">Thank you for your purchase. Your cart has been cleared.</p>
+            <Link href="/" className="mt-8 inline-block bg-black text-white px-6 py-2 rounded-md cursor-pointer">
                 Continue Shopping
             </Link>
         </div>

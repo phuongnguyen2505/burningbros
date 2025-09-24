@@ -30,7 +30,7 @@ export default function CartIconWithCount() {
         >
             <LuShoppingBag className="h-6 w-6" />
             {isClient && totalItems > 0 && (
-                <span className="absolute top-0 right-0 mt-3 -mr-8 flex h-4 w-4 items-center text-white justify-center rounded-full bg-red-500 text-xs font-medium text-primary-foreground">
+                <span className="absolute top-0 right-0 -mt-1 -mr-3 flex h-4 w-4 items-center text-white justify-center rounded-full bg-red-500 text-xs font-medium text-primary-foreground">
                     {totalItems}
                 </span>
             )}

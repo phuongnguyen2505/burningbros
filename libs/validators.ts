@@ -5,7 +5,8 @@ const phoneRegex = new RegExp(
 );
 
 export const checkoutSchema = z.object({
-    name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+    firstName: z.string().min(2, { message: "First name is too short." }),
+    lastName: z.string().min(2, { message: "Last name is too short." }),
     phone: z.string().regex(phoneRegex, { message: "Invalid phone number." }),
     email: z.string().email({ message: "Invalid email address." }),
     address: z.string().min(5, { message: "Address is too short." }),
