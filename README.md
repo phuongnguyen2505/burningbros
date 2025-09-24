@@ -5,21 +5,34 @@ Live Demo URL: https://burningbros.vercel.app/
 user: emilys
 password: emilyspass
 credit card: 
+
 MasterCard 
+
 5555-5555-5555-5555 
+
 12/33 
+
 CVV:123
 
 VISA 
+
 4444-4444-4444-4444 
+
 12/33 
+
 CVV:123
 
+
 Tech Stack
+
 Framework: Next.js, TypeScript, Tailwind CSS
+
 State Management: Zustand
+
 Forms: React Hook Form & Zod
+
 Animations: Framer Motion
+
 
 1. How to run the project
    
